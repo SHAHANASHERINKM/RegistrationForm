@@ -3,8 +3,13 @@ document.getElementById("RegForm").addEventListener("submit", function (event) {
     event.preventDefault();  // Prevent form submission
 
     // Clear previous error messages
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("phoneError").textContent = "";
     document.getElementById("usernameError").textContent = "";
     document.getElementById("passwordError").textContent = "";
+    document.getElementById("yearTypeError").textContent = "";
+    document.getElementById("userTypeError").textContent = "";
 
     // Get the input values
     const name = document.getElementById("name").value;
@@ -14,10 +19,25 @@ document.getElementById("RegForm").addEventListener("submit", function (event) {
     const password = document.getElementById("password").value;
     const yearType = document.getElementById("yearType").value;
 
-
-
-
     let valid = true;
+// Input listeners to clear errors instantly when user types
+// Array of field IDs and their corresponding error message IDs
+const fields = [
+    { fieldId: "name", errorId: "nameError" },
+    { fieldId: "email", errorId: "emailError" },
+    { fieldId: "phone", errorId: "phoneError" },
+    { fieldId: "username", errorId: "usernameError" },
+    { fieldId: "password", errorId: "passwordError" },
+    { fieldId: "yearType", errorId: "yearTypeError" },
+    { fieldId: "userType", errorId: "userTypeError" }
+];
+
+// Attach event listeners for each field
+fields.forEach(({ fieldId, errorId }) => {
+    document.getElementById(fieldId).addEventListener("input", function () {
+        document.getElementById(errorId).textContent = "";
+    });
+});
 
 
     if (!name) {
@@ -30,6 +50,10 @@ document.getElementById("RegForm").addEventListener("submit", function (event) {
     }
     if (!phone) {
         document.getElementById("phoneError").textContent = "Please enter your number.";
+        valid = false;
+    }
+    else if (phone.length > 10) {
+        document.getElementById("phoneError").textContent = "*Enter valid mobile number.";
         valid = false;
     }
     // Validate username

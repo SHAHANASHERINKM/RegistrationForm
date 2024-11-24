@@ -15,10 +15,23 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     const yearType = document.getElementById("yearType").value;
     const semType = document.getElementById("semType").value;
 
+  let valid = true;
+    // Input listeners to clear errors instantly when user types
+// Array of field IDs and their corresponding error message IDs
+const fields = [
+    { fieldId: "username", errorId: "usernameError" },
+    { fieldId: "password", errorId: "passwordError" },
+    { fieldId: "yearType", errorId: "yearTypeError" },
+    { fieldId: "userType", errorId: "userTypeError" },
+    { fieldId: "semType", errorId: "semTypeError" }
+];
 
-
-
-    let valid = true;
+// Attach event listeners for each field
+fields.forEach(({ fieldId, errorId }) => {
+    document.getElementById(fieldId).addEventListener("input", function () {
+        document.getElementById(errorId).textContent = "";
+    });
+});
    
     // Validate username
     if (!username) {
