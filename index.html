@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--css-->
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form id="loginForm"  method="post"> 
+
+
+                    <div class="input-field">
+                        <input type="text" name="Name" id="username" placeholder="Username" >
+                        <span id="usernameError" class="error"></span>
+                    </div>  
+                    <div class="input-field">
+                        <input type="password" id="password" name="Password"  placeholder="Password" >
+                        <span id="passwordError" class="error"></span>
+                    </div>  
+                    <!--academicyear-->
+
+                    <div class="input-field">
+                         <div class="p"> 
+                              <p id="year">Academic Year </p>
+                         </div>
+   
+                        <div class="options">
+                             <select name="yearType" id="yearType" class="option" >
+                                <option value=""></option>
+                                <option value="2020-21">2020-21</option>
+                                <option value="2021-22">2021-22</option>
+                                <option value="2022-23">2022-23</option>
+                                <option value="2023-24">2023-24</option>
+                                <option value="2024-25">2024-25</option>
+                            </select>
+                            <span id="yearTypeError" class="error"></span>
+                        </div>
+                    </div>
+
+                    <!--semester-->
+
+                    <div class="input-field">
+                        <div class="p"> 
+                            <p>Semester </p>
+                        </div>
+                    
+                        <div class="options">
+                            <select name="semType" id="semType" class="option" >
+                                <option value=""></option>
+                                <option value="s1">S1</option>
+                                <option value="s2">S2</option>
+                                <option value="s3">S3</option>
+                                <option value="s4">S4</option>
+<<<<<<< HEAD
+                                <option value="S5">S5</option>
+=======
+                                <option value="s5">S5</option>
+>>>>>>> 9b75b8727f46b5cf34ae47a70f02770f651865ee
+                            </select>
+                            <span id="semTypeError" class="error"></span>
+                        </div>
+                    </div>
+                    <!--role-->
+                    <div class="input-field">
+                        <div class="p"> 
+                            <p>Role</p>
+                        </div>
+
+                        <div class="options">
+                            <select  name="uesrtype" id="userType" class="option" >
+                                <option value=""></option>
+                                <option value="Student">Student</option>
+                                <option value="Faculty">Faculty</option>
+                                <option value="Guest">Guest</option>
+
+                            </select>
+                            <span id="userTypeError" class="error"></span>
+                        </div>
+                    </div>
+
+
+
+
+<!--button-->
+<button  class="button" type="submit">Login</button>
+<p class="register-link">Not registered yet? <a href="signup.html" >Register Now</a></p>
+
+
+</form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

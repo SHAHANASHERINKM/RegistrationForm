@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--css-->
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">   Registration Form</span>
+
+                <form id="RegForm"  method="post"> 
+                    <!--name,username,email,password,phone-->
+
+                    <div class="input-field">
+                        <input type="text" name="Name" id="name" placeholder="Enter Your Name" >
+                        <span id="nameError" class="error"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="email" id="email" placeholder="Enter Your Email Id" >
+                        <span id="emailError" class="error"></span>
+                    </div>  
+                    <div class="input-field">
+                        <input type="phone" name="phone" id="phone" placeholder="Enter Your phone" >
+                        <span id="phoneError" class="error"></span>
+                    </div> 
+                    <div class="input-field">
+                        <input type="text" name="username" id="username" placeholder="Enter Username" >
+                        <span id="usernameError" class="error"></span>
+                    </div> 
+                    <div class="input-field">
+                        <input type="password" id="password" name="Password"  placeholder="Password" >
+                        <span id="passwordError" class="error"></span>
+                    </div>  
+                    <!--academicyear-->
+
+                    <div class="input-field">
+                         <div class="p"> 
+                              <p id="year">Academic Year </p>
+                         </div>
+   
+                        <div class="options">
+                             <select name="yearType" id="yearType" class="option" >
+                                <option value=""></option>
+                                <option value="2020-21">2020-21</option>
+                                <option value="2021-22">2021-22</option>
+                                <option value="2022-23">2022-23</option>
+                                <option value="2023-24">2023-24</option>
+                                <option value="2024-25">2024-25</option>
+                            </select>
+                            <span id="yearTypeError" class="error"></span>
+                        </div>
+                    </div>
+
+                    <!--semester-->    
+                    <!--role-->
+                    <div class="input-field">
+                        <div class="p"> 
+                            <p>Role</p>
+                        </div>
+
+                        <div class="options">
+                            <select  name="uesrtype" id="userType" class="option" >
+                                <option value=""></option>
+                                <option value="Student">Student</option>
+                                <option value="Faculty">Faculty</option>
+                                <option value="Guest">Guest</option>
+
+                            </select>
+                            <span id="userTypeError" class="error"></span>
+                        </div>
+                    </div>
+<!--gender-->
+<div class="gender">
+<label><b>Gender:</b></label>
+        <br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label class="gender-type">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label class="gender-type">Female</label>
+</div>
+<!--button-->
+<button  class="button" type="submit">Register </button>
+
+</form>
+            </div>
+        </div>
+    </div>
+
+    <script src="RegScript.js"></script>   
+    
+</body>
+</html>
