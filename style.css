@@ -179,3 +179,31 @@ width:85px;
     }
 
 }
+
+@media only screen and (max-width:316px){
+    .p{
+        width:130px;
+
+    }
+    .options{
+margin-left: 15px;
+    }
+    .button{
+        width:85%;
+    }
+    .container{
+        width:90%
+    }
+    #year{
+        font-size: 11px;  
+        
+        
+    }
+    .option{
+width:85px;
+    }
+    .gender-type{
+        padding-right: 20px;
+    }
+
+}
