@@ -180,9 +180,9 @@ width:85px;
 
 }
 
-@media only screen and (max-width:316px){
+@media only screen and (max-width:300px){
     .p{
-        width:130px;
+        width:110px;
 
     }
     .options{
